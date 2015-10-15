@@ -20,6 +20,9 @@
 @property (nonatomic, strong) ABCircleLayout *circleLayout;
 
 @property (nonatomic, strong) UISegmentedControl *layoutChangeSegmentedControl;
+- (IBAction)addButtonTapped:(id)sender;
+- (IBAction)trashButtonTapped:(id)sender;
+
 
 
 @end
@@ -36,10 +39,6 @@ static NSString * const reuseIdentifier = @"Cell";
         //Setup our model
 
     self.cellCount = 12;
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem)];
-    
-    
     
     // Do any additional setup after loading the view.
 }
@@ -80,10 +79,6 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
-#pragma mark - Helper methods
--(void)addItem {
-    
-}
 
 #pragma mark <UICollectionViewDelegate>
 
@@ -116,4 +111,11 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
+    //"addItem" in AF's original
+- (IBAction)addButtonTapped:(id)sender {
+}
+
+    //"deleteItem" in AF's original
+- (IBAction)trashButtonTapped:(id)sender {
+}
 @end

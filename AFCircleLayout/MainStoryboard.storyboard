@@ -36,7 +36,18 @@
                             <outlet property="delegate" destination="OPG-pp-TjK" id="a6f-aD-zHB"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="voz-Hx-1U3"/>
+                    <navigationItem key="navigationItem" id="voz-Hx-1U3">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="add" id="cOc-GH-Uv9">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="OPG-pp-TjK" id="gGg-pv-NtP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="m7K-UU-HCq">
+                            <connections>
+                                <action selector="trashButtonTapped:" destination="OPG-pp-TjK" id="Hzg-Gx-gbP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgS-f1-6Yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
