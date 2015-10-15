@@ -31,33 +31,11 @@
 
 static NSString * const reuseIdentifier = @"Cell";
 
--(void)loadView {
-        // === Create our view ===
-    
-        // Instantiate our layouts
-    self.circleLayout = [ABCircleLayout new];
-    self.flowLayout   = [ABFlowLayout new];
-    
-        // Create a new collection view and configure.
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.circleLayout];
-    collectionView.delegate   = self;
-    collectionView.dataSource = self;
-    
-        // Register cell classes
-    [self.collectionView registerClass:[ABCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-        // Set up the collection view geometry to cover the whole screen in any orientation.
-    collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
-        // Assign self.collectionView to ours
-    self.collectionView = collectionView;
-    
-        //Setup our model
-    self.cellCount = 12;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+        //Setup our model
+
+    self.cellCount = 12;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem)];
     
