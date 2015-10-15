@@ -7,23 +7,61 @@
 //
 
 #import "ABCollectionViewController.h"
+#import "ABCollectionViewCell.h"
+#import "ABFlowLayout.h"
+#import "ABCircleLayout.h"
+
 
 @interface ABCollectionViewController ()
+
+@property (nonatomic, assign) NSInteger cellCount;
+
+@property (nonatomic, strong) ABFlowLayout *flowLayout;
+@property (nonatomic, strong) ABCircleLayout *circleLayout;
+
+@property (nonatomic, strong) UISegmentedControl *layoutChangeSegmentedControl;
+
 
 @end
 
 @implementation ABCollectionViewController
 
+#pragma mark - View Controller Lifecycle
+
+
 static NSString * const reuseIdentifier = @"Cell";
+
+-(void)loadView {
+        // === Create our view ===
+    
+        // Instantiate our layouts
+    self.circleLayout = [ABCircleLayout new];
+    self.flowLayout   = [ABFlowLayout new];
+    
+        // Create a new collection view and configure.
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.circleLayout];
+    collectionView.delegate   = self;
+    collectionView.dataSource = self;
+    
+        // Register cell classes
+    [self.collectionView registerClass:[ABCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    
+        // Set up the collection view geometry to cover the whole screen in any orientation.
+    collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+        // Assign self.collectionView to ours
+    self.collectionView = collectionView;
+    
+        //Setup our model
+    self.cellCount = 12;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem)];
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    
     
     // Do any additional setup after loading the view.
 }
@@ -62,6 +100,11 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     
     return cell;
+}
+
+#pragma mark - Helper methods
+-(void)addItem {
+    
 }
 
 #pragma mark <UICollectionViewDelegate>

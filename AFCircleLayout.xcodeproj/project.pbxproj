@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		38103B471BD02F1B009F22E3 /* ABCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38103B461BD02F1B009F22E3 /* ABCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		38103B4B1BD0322B009F22E3 /* ABCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38103B4A1BD0322B009F22E3 /* ABCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		38103B4E1BD03240009F22E3 /* ABCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 38103B4D1BD03240009F22E3 /* ABCircleLayout.m */; settings = {ASSET_TAGS = (); }; };
+		38103B511BD0329B009F22E3 /* ABFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 38103B501BD0329B009F22E3 /* ABFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		38103B541BD032C4009F22E3 /* ABDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38103B531BD032C4009F22E3 /* ABDecorationView.m */; settings = {ASSET_TAGS = (); }; };
 		38B430E01BCF4DCB00BF12E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B430DF1BCF4DCB00BF12E5 /* main.m */; };
 		38B430E31BCF4DCB00BF12E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B430E21BCF4DCB00BF12E5 /* AppDelegate.m */; };
 		38B430E51BCF4DCB00BF12E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B430E41BCF4DCB00BF12E5 /* Assets.xcassets */; };
@@ -18,6 +22,14 @@
 		38103B441BD02ED0009F22E3 /* Circle Layout-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Circle Layout-Prefix.pch"; sourceTree = "<group>"; };
 		38103B451BD02F1B009F22E3 /* ABCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCollectionViewController.h; sourceTree = "<group>"; };
 		38103B461BD02F1B009F22E3 /* ABCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCollectionViewController.m; sourceTree = "<group>"; };
+		38103B491BD0322B009F22E3 /* ABCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCollectionViewCell.h; sourceTree = "<group>"; };
+		38103B4A1BD0322B009F22E3 /* ABCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCollectionViewCell.m; sourceTree = "<group>"; };
+		38103B4C1BD03240009F22E3 /* ABCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABCircleLayout.h; sourceTree = "<group>"; };
+		38103B4D1BD03240009F22E3 /* ABCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABCircleLayout.m; sourceTree = "<group>"; };
+		38103B4F1BD0329B009F22E3 /* ABFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABFlowLayout.h; sourceTree = "<group>"; };
+		38103B501BD0329B009F22E3 /* ABFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABFlowLayout.m; sourceTree = "<group>"; };
+		38103B521BD032C4009F22E3 /* ABDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABDecorationView.h; sourceTree = "<group>"; };
+		38103B531BD032C4009F22E3 /* ABDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABDecorationView.m; sourceTree = "<group>"; };
 		38B430DB1BCF4DCB00BF12E5 /* AFCircleLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFCircleLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B430DF1BCF4DCB00BF12E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38B430E11BCF4DCB00BF12E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,6 +59,28 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		38103B551BD032CE009F22E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38103B491BD0322B009F22E3 /* ABCollectionViewCell.h */,
+				38103B4A1BD0322B009F22E3 /* ABCollectionViewCell.m */,
+				38103B521BD032C4009F22E3 /* ABDecorationView.h */,
+				38103B531BD032C4009F22E3 /* ABDecorationView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		38103B561BD032DF009F22E3 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				38103B4F1BD0329B009F22E3 /* ABFlowLayout.h */,
+				38103B501BD0329B009F22E3 /* ABFlowLayout.m */,
+				38103B4C1BD03240009F22E3 /* ABCircleLayout.h */,
+				38103B4D1BD03240009F22E3 /* ABCircleLayout.m */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
 		38B430D21BCF4DCA00BF12E5 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +102,8 @@
 			children = (
 				38B430E11BCF4DCB00BF12E5 /* AppDelegate.h */,
 				38B430E21BCF4DCB00BF12E5 /* AppDelegate.m */,
+				38103B551BD032CE009F22E3 /* Views */,
+				38103B561BD032DF009F22E3 /* Layouts */,
 				38103B481BD02F1E009F22E3 /* Controllers */,
 				38B430E41BCF4DCB00BF12E5 /* Assets.xcassets */,
 				38B430E61BCF4DCB00BF12E5 /* LaunchScreen.storyboard */,
@@ -157,7 +193,11 @@
 			files = (
 				38103B471BD02F1B009F22E3 /* ABCollectionViewController.m in Sources */,
 				38B430E31BCF4DCB00BF12E5 /* AppDelegate.m in Sources */,
+				38103B541BD032C4009F22E3 /* ABDecorationView.m in Sources */,
+				38103B511BD0329B009F22E3 /* ABFlowLayout.m in Sources */,
 				38B430E01BCF4DCB00BF12E5 /* main.m in Sources */,
+				38103B4B1BD0322B009F22E3 /* ABCollectionViewCell.m in Sources */,
+				38103B4E1BD03240009F22E3 /* ABCircleLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
